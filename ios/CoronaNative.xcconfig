@@ -1,0 +1,20 @@
+// Settings for building Solar2D Native iOS plugin
+
+// Standard headers
+HEADER_SEARCH_PATHS = $(inherited) $(SRCROOT)/../shared/include $(SRCROOT)/../common/include $(SRCROOT)/../rust/src /Applications/Corona/Native/Corona/shared/include /Applications/Corona/Native/Corona/shared/include/Corona /Applications/Corona/Native/Corona/shared/include/lua
+LIBRARY_SEARCH_PATHS = $(inherited) $(SRCROOT)/lib $(SRCROOT)/plugin/lib /Applications/Corona/Native/Corona/ios/lib
+
+// Corona Native paths
+CORONA_ROOT = /Applications/Corona/Native
+
+// iOS specific settings
+ARCHS = $(ARCHS_STANDARD)
+SKIP_INSTALL = YES
+TARGETED_DEVICE_FAMILY = 1,2
+IPHONEOS_DEPLOYMENT_TARGET = 10.3
+SDKROOT = iphoneos
+SUPPORTS_MACCATALYST = NO
+
+// Optimization settings
+GCC_OPTIMIZATION_LEVEL = 2
+GCC_PREPROCESSOR_DEFINITIONS = SOLAR2D_IOS=1 $(inherited)

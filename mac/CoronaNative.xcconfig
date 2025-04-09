@@ -1,0 +1,16 @@
+// Settings for building Solar2D Native macOS plugin
+// This file is used by the mac Plugin.xcodeproj project
+
+// Standard headers
+HEADER_SEARCH_PATHS = $(inherited) $(SRCROOT)/../shared/include $(SRCROOT)/../common/include $(SRCROOT)/../rust/src /Applications/Corona/Native/Corona/shared/include /Applications/Corona/Native/Corona/shared/include/Corona /Applications/Corona/Native/Corona/shared/include/lua
+LIBRARY_SEARCH_PATHS = $(inherited) $(SRCROOT)/lib /Applications/Corona/Native/Corona/mac/bin
+
+// Corona Native paths
+CORONA_ROOT = /Applications/Corona/Native
+
+// Optimization for plugin builds
+GCC_OPTIMIZATION_LEVEL = 2
+GCC_UNROLL_LOOPS = YES
+GCC_PREPROCESSOR_DEFINITIONS = SOLAR2D_MACOS=1 $(inherited)
+
+OTHER_LDFLAGS = -undefined dynamic_lookup
