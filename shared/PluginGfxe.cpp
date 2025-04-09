@@ -61,16 +61,15 @@ extern "C" {
 }
 
 // Add debug logging function
-static void debugLog(const char* format, ...) {
+static void debugLog(lua_State* L, const char* format, ...) {
     va_list args;
     va_start(args, format);
-    
+
     char buffer[1024];
     vsnprintf(buffer, sizeof(buffer), format, args);
-    
-    printf("[GFX_DEBUG] %s\n", buffer);
-    fflush(stdout);
-    
+
+    CoronaLuaLog(L, "%s", buffer); // Use CoronaLuaLog for logging
+
     va_end(args);
 }
 
@@ -82,21 +81,21 @@ static int loadSvg(lua_State* L);
 CORONA_EXPORT int luaopen_plugin_gfxe(lua_State* L)
 {
     // Register the library
-    debugLog("Starting luaopen_plugin_gfxe");
-    
+    debugLog(L, "Starting luaopen_plugin_gfxe");
+
     try {
         lua_CFunction factory = Corona::Lua::Open<bufferLoader>;
-        debugLog("Got factory function");
-        
+        debugLog(L, "Got factory function");
+
         const char kName[] = "plugin_gfxe";
-        debugLog("Calling CoronaLibraryNewWithFactory");
+        debugLog(L, "Calling CoronaLibraryNewWithFactory");
         int result = CoronaLibraryNewWithFactory(L, factory, NULL, NULL);
-        debugLog("CoronaLibraryNewWithFactory returned: %d", result);
+        debugLog(L, "CoronaLibraryNewWithFactory returned: %d", result);
 
         // Setup the plugin API
         if (result)
         {
-            debugLog("Setting up plugin API");
+            debugLog(L, "Setting up plugin API");
             static const luaL_Reg kVTable[] = {
                 {"_newStaticTexture", newStaticTexture},
                 {"_newScalableTexture", newScalableTexture},
@@ -105,20 +104,20 @@ CORONA_EXPORT int luaopen_plugin_gfxe(lua_State* L)
             };
 
             luaL_register(L, NULL, kVTable);
-            debugLog("Plugin initialization complete");
+            debugLog(L, "Plugin initialization complete");
         }
         else {
-            debugLog("Failed to initialize plugin: CoronaLibraryNewWithFactory returned 0");
+            debugLog(L, "Failed to initialize plugin: CoronaLibraryNewWithFactory returned 0");
         }
 
         return result;
     }
     catch (const std::exception& e) {
-        debugLog("Exception during plugin initialization: %s", e.what());
+        debugLog(L, "Exception during plugin initialization: %s", e.what());
         return 0;
     }
     catch (...) {
-        debugLog("Unknown exception during plugin initialization");
+        debugLog(L, "Unknown exception during plugin initialization");
         return 0;
     }
 }
@@ -774,8 +773,6 @@ STATIC_FAIL:
   return 1;
 }
 
-// ----------------------------------------------------------------------------
-
 static int newScalableTexture(lua_State* L) {
   void* bytes;
 
@@ -946,13 +943,13 @@ static int newScalableTexture(lua_State* L) {
 }
 
 SVG_FAIL:
-  resvg_options_destroy(scalable_child->opts);
+    resvg_options_destroy(scalable_child->opts);
 
-  delete scalable_child;
-  delete texture;
+    delete scalable_child;
+    delete texture;
 
-  lua_pushnil(L);
-  return 1;
+    lua_pushnil(L);
+    return 1;
 }
 
 // ----------------------------------------------------------------------------
