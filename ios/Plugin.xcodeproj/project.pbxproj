@@ -7,26 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A4E253CC273B81E0002B6D21 /* libresvg_universal.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A4E253CB273B81E0002B6D21 /* libresvg_universal.a */; };
 		A4E253E8273B8500002B6D21 /* PluginGfxe.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A4E253E6273B8500002B6D21 /* PluginGfxe.cpp */; };
+		C0C07C892DA7A99200293B49 /* libwebp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C0F17EC32DA779DE00E76C02 /* libwebp.a */; };
+		C0C07C8A2DA7A99200293B49 /* libwebpdemux.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C0F17EC22DA779DE00E76C02 /* libwebpdemux.a */; };
+		C0C07C8B2DA7A99200293B49 /* libwebpmux.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C0F17EC62DA779DE00E76C02 /* libwebpmux.a */; };
+		C0C07C8C2DA7A9A500293B49 /* libresvg_universal.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C0F17ECE2DA779FB00E76C02 /* libresvg_universal.a */; };
+		C0C07C8E2DA7A9DE00293B49 /* plugin_gfxe.c in Sources */ = {isa = PBXBuildFile; fileRef = C0C07C8D2DA7A9DE00293B49 /* plugin_gfxe.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A4E253B8273B8195002B6D21 /* libplugin_gfxe.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libplugin_gfxe.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		A4E253BC273B8195002B6D21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A4E253CB273B81E0002B6D21 /* libresvg_universal.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libresvg_universal.a; path = plugin/lib/libresvg_universal.a; sourceTree = "<group>"; };
-		A4E253E4273B8350002B6D21 /* qoi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = qoi.h; path = ../shared/qoi.h; sourceTree = "<group>"; };
-		A4E253E5273B8350002B6D21 /* stb_image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = stb_image.h; path = ../shared/stb_image.h; sourceTree = "<group>"; };
 		A4E253E6273B8500002B6D21 /* PluginGfxe.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PluginGfxe.cpp; path = ../shared/PluginGfxe.cpp; sourceTree = "<group>"; };
-		C03E03BC2DA511FC00C4F1E6 /* WebPDemux.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = WebPDemux.xcframework; path = "libwebp-1.5.0-ios-framework/WebPDemux.xcframework"; sourceTree = "<group>"; };
-		C03E03BD2DA511FC00C4F1E6 /* WebP.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = WebP.xcframework; path = "libwebp-1.5.0-ios-framework/WebP.xcframework"; sourceTree = "<group>"; };
-		C03E03BE2DA511FC00C4F1E6 /* WebP.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebP.framework; path = "libwebp-1.5.0-ios-framework/WebP.framework"; sourceTree = "<group>"; };
-		C03E03BF2DA511FC00C4F1E6 /* WebPMux.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebPMux.framework; path = "libwebp-1.5.0-ios-framework/WebPMux.framework"; sourceTree = "<group>"; };
-		C03E03C02DA511FC00C4F1E6 /* WebPDemux.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebPDemux.framework; path = "libwebp-1.5.0-ios-framework/WebPDemux.framework"; sourceTree = "<group>"; };
-		C03E03C12DA511FC00C4F1E6 /* WebPMux.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = WebPMux.xcframework; path = "libwebp-1.5.0-ios-framework/WebPMux.xcframework"; sourceTree = "<group>"; };
-		C03E03C22DA511FC00C4F1E6 /* WebPDecoder.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = WebPDecoder.xcframework; path = "libwebp-1.5.0-ios-framework/WebPDecoder.xcframework"; sourceTree = "<group>"; };
-		C03E03C32DA511FC00C4F1E6 /* SharpYuv.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = SharpYuv.xcframework; path = "libwebp-1.5.0-ios-framework/SharpYuv.xcframework"; sourceTree = "<group>"; };
-		C03E03C42DA511FD00C4F1E6 /* WebPDecoder.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebPDecoder.framework; path = "libwebp-1.5.0-ios-framework/WebPDecoder.framework"; sourceTree = "<group>"; };
+		C0C07C8D2DA7A9DE00293B49 /* plugin_gfxe.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = plugin_gfxe.c; sourceTree = "<group>"; };
+		C0F17EC22DA779DE00E76C02 /* libwebpdemux.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libwebpdemux.a; path = lib/libwebpdemux.a; sourceTree = "<group>"; };
+		C0F17EC32DA779DE00E76C02 /* libwebp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libwebp.a; path = lib/libwebp.a; sourceTree = "<group>"; };
+		C0F17EC42DA779DE00E76C02 /* libwebpdecoder.la */ = {isa = PBXFileReference; lastKnownFileType = text; name = libwebpdecoder.la; path = lib/libwebpdecoder.la; sourceTree = "<group>"; };
+		C0F17EC52DA779DE00E76C02 /* libwebpmux.la */ = {isa = PBXFileReference; lastKnownFileType = text; name = libwebpmux.la; path = lib/libwebpmux.la; sourceTree = "<group>"; };
+		C0F17EC62DA779DE00E76C02 /* libwebpmux.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libwebpmux.a; path = lib/libwebpmux.a; sourceTree = "<group>"; };
+		C0F17EC72DA779DE00E76C02 /* libwebpdemux.la */ = {isa = PBXFileReference; lastKnownFileType = text; name = libwebpdemux.la; path = lib/libwebpdemux.la; sourceTree = "<group>"; };
+		C0F17EC82DA779DE00E76C02 /* libwebpdecoder.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libwebpdecoder.a; path = lib/libwebpdecoder.a; sourceTree = "<group>"; };
+		C0F17EC92DA779DE00E76C02 /* libwebp.la */ = {isa = PBXFileReference; lastKnownFileType = text; name = libwebp.la; path = lib/libwebp.la; sourceTree = "<group>"; };
+		C0F17ECE2DA779FB00E76C02 /* libresvg_universal.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libresvg_universal.a; path = lib/libresvg_universal.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,7 +35,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A4E253CC273B81E0002B6D21 /* libresvg_universal.a in Frameworks */,
+				C0C07C8B2DA7A99200293B49 /* libwebpmux.a in Frameworks */,
+				C0C07C8C2DA7A9A500293B49 /* libresvg_universal.a in Frameworks */,
+				C0C07C892DA7A99200293B49 /* libwebp.a in Frameworks */,
+				C0C07C8A2DA7A99200293B49 /* libwebpdemux.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,7 +66,6 @@
 		A4E253BA273B8195002B6D21 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				A4E253BC273B8195002B6D21 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			path = plugin;
@@ -71,9 +74,8 @@
 		A4E253C6273B81B8002B6D21 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				C0C07C8D2DA7A9DE00293B49 /* plugin_gfxe.c */,
 				A4E253E6273B8500002B6D21 /* PluginGfxe.cpp */,
-				A4E253E4273B8350002B6D21 /* qoi.h */,
-				A4E253E5273B8350002B6D21 /* stb_image.h */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -81,16 +83,15 @@
 		A4E253CD273B81F0002B6D21 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C03E03C32DA511FC00C4F1E6 /* SharpYuv.xcframework */,
-				C03E03BE2DA511FC00C4F1E6 /* WebP.framework */,
-				C03E03BD2DA511FC00C4F1E6 /* WebP.xcframework */,
-				C03E03C42DA511FD00C4F1E6 /* WebPDecoder.framework */,
-				C03E03C22DA511FC00C4F1E6 /* WebPDecoder.xcframework */,
-				C03E03C02DA511FC00C4F1E6 /* WebPDemux.framework */,
-				C03E03BC2DA511FC00C4F1E6 /* WebPDemux.xcframework */,
-				C03E03BF2DA511FC00C4F1E6 /* WebPMux.framework */,
-				C03E03C12DA511FC00C4F1E6 /* WebPMux.xcframework */,
-				A4E253CB273B81E0002B6D21 /* libresvg_universal.a */,
+				C0F17ECE2DA779FB00E76C02 /* libresvg_universal.a */,
+				C0F17EC32DA779DE00E76C02 /* libwebp.a */,
+				C0F17EC92DA779DE00E76C02 /* libwebp.la */,
+				C0F17EC82DA779DE00E76C02 /* libwebpdecoder.a */,
+				C0F17EC42DA779DE00E76C02 /* libwebpdecoder.la */,
+				C0F17EC22DA779DE00E76C02 /* libwebpdemux.a */,
+				C0F17EC72DA779DE00E76C02 /* libwebpdemux.la */,
+				C0F17EC62DA779DE00E76C02 /* libwebpmux.a */,
+				C0F17EC52DA779DE00E76C02 /* libwebpmux.la */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -162,6 +163,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0C07C8E2DA7A9DE00293B49 /* plugin_gfxe.c in Sources */,
 				A4E253E8273B8500002B6D21 /* PluginGfxe.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -317,6 +319,7 @@
 				);
 				INFOPLIST_FILE = plugin/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -326,6 +329,7 @@
 					"$(inherited)",
 					"$(SRCROOT)/plugin/lib",
 					/Applications/Corona/Native/Corona/shared/lib/ios,
+					"$(PROJECT_DIR)/lib",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.kwiksher.plugin.graphics;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -364,6 +368,7 @@
 				);
 				INFOPLIST_FILE = plugin/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -373,6 +378,7 @@
 					"$(inherited)",
 					"$(SRCROOT)/plugin/lib",
 					/Applications/Corona/Native/Corona/shared/lib/ios,
+					"$(PROJECT_DIR)/lib",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.kwiksher.plugin.graphics;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";

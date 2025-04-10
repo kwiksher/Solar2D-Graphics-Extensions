@@ -63,6 +63,7 @@
 		C05CBF1E281CF4D000DB7F91 /* AndroidResources in Resources */ = {isa = PBXBuildFile; fileRef = C05CBF16281CF4CF00DB7F91 /* AndroidResources */; };
 		C05CBF21281CF4D000DB7F91 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C05CBF19281CF4D000DB7F91 /* Icon.png */; };
 		C05CBF23281CF4D000DB7F91 /* main.lua in Resources */ = {isa = PBXBuildFile; fileRef = C05CBF1B281CF4D000DB7F91 /* main.lua */; };
+		C0C07C782DA79FAF00293B49 /* libplugin_gfxe.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C00731742DA4F7470069F461 /* libplugin_gfxe.a */; };
 		C22C1E4B1E981D9000D74196 /* LaunchScreen.storyboardc in Resources */ = {isa = PBXBuildFile; fileRef = C22C1E4A1E981D9000D74196 /* LaunchScreen.storyboardc */; };
 		E640B2F21BFC00B00031FAE9 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E640B2F11BFC00B00031FAE9 /* AssetsLibrary.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		E640B2F41BFC00BA0031FAE9 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E640B2F31BFC00BA0031FAE9 /* Photos.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -132,6 +133,11 @@
 		C05CBF16281CF4CF00DB7F91 /* AndroidResources */ = {isa = PBXFileReference; lastKnownFileType = folder; name = AndroidResources; path = ../Corona/AndroidResources; sourceTree = "<group>"; };
 		C05CBF19281CF4D000DB7F91 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = ../Corona/Icon.png; sourceTree = "<group>"; };
 		C05CBF1B281CF4D000DB7F91 /* main.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = main.lua; path = ../Corona/main.lua; sourceTree = "<group>"; };
+		C0C07C792DA7A02500293B49 /* libresvg_universal.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libresvg_universal.a; path = lib/libresvg_universal.a; sourceTree = "<group>"; };
+		C0C07C802DA7A65C00293B49 /* libwebp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libwebp.a; path = lib/libwebp.a; sourceTree = "<group>"; };
+		C0C07C822DA7A6AC00293B49 /* libwebpdecoder.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libwebpdecoder.a; path = lib/libwebpdecoder.a; sourceTree = "<group>"; };
+		C0C07C842DA7A6E200293B49 /* libwebpdemux.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libwebpdemux.a; path = lib/libwebpdemux.a; sourceTree = "<group>"; };
+		C0C07C852DA7A6E200293B49 /* libwebpmux.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libwebpmux.a; path = lib/libwebpmux.a; sourceTree = "<group>"; };
 		C22C1E4A1E981D9000D74196 /* LaunchScreen.storyboardc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.storyboardc; name = LaunchScreen.storyboardc; path = ../Corona/LaunchScreen.storyboardc; sourceTree = "<group>"; };
 		C277D3B51EBB9F8E00966BA1 /* _CoronaSplashScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = _CoronaSplashScreen.png; sourceTree = "<group>"; };
 		E640B2F11BFC00B00031FAE9 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
@@ -178,6 +184,7 @@
 				A484112615114F700074BD57 /* OpenGLES.framework in Frameworks */,
 				A484118715128D5D0074BD57 /* QuartzCore.framework in Frameworks */,
 				A484118815128D5D0074BD57 /* Security.framework in Frameworks */,
+				C0C07C782DA79FAF00293B49 /* libplugin_gfxe.a in Frameworks */,
 				A484118915128D5D0074BD57 /* StoreKit.framework in Frameworks */,
 				A484118A15128D5D0074BD57 /* SystemConfiguration.framework in Frameworks */,
 				A4E2537F166AE3DC00DCDC2C /* Twitter.framework in Frameworks */,
@@ -233,7 +240,12 @@
 		A484111C15114F700074BD57 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C0C07C842DA7A6E200293B49 /* libwebpdemux.a */,
+				C0C07C852DA7A6E200293B49 /* libwebpmux.a */,
+				C0C07C822DA7A6AC00293B49 /* libwebpdecoder.a */,
+				C0C07C802DA7A65C00293B49 /* libwebp.a */,
 				C00731762DA4F99A0069F461 /* libresvg_universal.a */,
+				C0C07C792DA7A02500293B49 /* libresvg_universal.a */,
 				C00731752DA4F9860069F461 /* libplugin_gfxe.a */,
 				E640B2F31BFC00BA0031FAE9 /* Photos.framework */,
 				E640B2F11BFC00B00031FAE9 /* AssetsLibrary.framework */,
@@ -304,7 +316,7 @@
 		A4E253DB166DE7C800DCDC2C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C00731742DA4F7470069F461 /* plugin_graphics.framework */,
+				C00731742DA4F7470069F461 /* libplugin_gfxe.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -376,10 +388,9 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		C00731742DA4F7470069F461 /* plugin_graphics.framework */ = {
+		C00731742DA4F7470069F461 /* libplugin_gfxe.a */ = {
 			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			name = plugin_graphics.framework;
+			fileType = archive.ar;
 			path = libplugin_gfxe.a;
 			remoteRef = C00731732DA4F7470069F461 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
@@ -468,7 +479,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\nBUILDER_PATH=\"$CORONA_ROOT\"/Corona/mac/bin/CoronaBuilder.app/Contents/MacOS/CoronaBuilder\n\n\"$BUILDER_PATH\" plugins download ios \"$PROJECT_DIR/../Corona/build.settings\" \"$PROJECT_DIR/CoronaApp.xcconfig\" $CORONA_FORCE_LOAD\n\nif [ $? -ne 0 ]\nthen\n    echo \"Exiting due to errors (above)\"\n    exit -1\nfi\n\ntouch \"$SRCROOT/../Corona\"";
+			shellScript = "\nBUILDER_PATH=\"$CORONA_ROOT\"/Corona/mac/bin/CoronaBuilder.app/Contents/MacOS/CoronaBuilder\n\n\"$BUILDER_PATH\" plugins download ios \"$PROJECT_DIR/../Corona/build.settings\" \"$PROJECT_DIR/CoronaApp.xcconfig\" $CORONA_FORCE_LOAD\n\nif [ $? -ne 0 ]\nthen\n    echo \"Exiting due to errors (above)\"\n    exit -1\nfi\n\ntouch \"$SRCROOT/../Corona\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -534,6 +545,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = /Applications/Corona/Native/Corona/ios/include/Corona;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -570,6 +582,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = /Applications/Corona/Native/Corona/ios/include/Corona;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
@@ -591,6 +604,11 @@
 				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
 				INFOPLIST_FILE = "App-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/plugin/build/plugin_gfxe",
+					"$(PROJECT_DIR)/lib",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.kwiksher.App;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -613,6 +631,11 @@
 				GCC_PREFIX_HEADER = Prefix.pch;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
 				INFOPLIST_FILE = "App-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/plugin/build/plugin_gfxe",
+					"$(PROJECT_DIR)/lib",
+				);
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.kwiksher.App;
 				PRODUCT_NAME = "$(TARGET_NAME)";

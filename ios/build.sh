@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# Build the Rust components
-./build_resvg_ios.sh
+# Build the SVG Rust components
+# ./build_resvg_ios.sh
 
 # Set environment variables
 PLUGIN_NAME=plugin_gfxe
