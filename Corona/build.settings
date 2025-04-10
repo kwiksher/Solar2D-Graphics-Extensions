@@ -52,25 +52,25 @@ settings =
     --
     plugins =
     {
-        ['plugin.gfxe'] =
-        {
+      ['plugin.gfxe'] =
+       {
             publisherId = 'com.ansh3ll',
-            supportedPlatforms =
-            {
-                ['win32-sim'] =
-                {
-                    url = 'https://github.com/ANSH3LL/Graphics-Extensions-for-Solar2D/releases/download/v0.4/win32-sim.tgz'
-                },
-                ['android'] =
-                {
-                    url = 'https://github.com/ANSH3LL/Graphics-Extensions-for-Solar2D/releases/download/v0.4/android.tgz'
-                }
-            }
+            -- supportedPlatforms =
+            -- {
+            --     ['win32-sim'] =
+            --     {
+            --         url = 'https://github.com/ANSH3LL/Graphics-Extensions-for-Solar2D/releases/download/v0.4/win32-sim.tgz'
+            --     },
+            --     ['android'] =
+            --     {
+            --         url = 'https://github.com/ANSH3LL/Graphics-Extensions-for-Solar2D/releases/download/v0.4/android.tgz'
+            --     }
+            -- }
         },
-        ["plugin.AssetReader"] =
-        {
-            publisherId = 'com.xibalbastudios',
-        }
+        -- ["plugin.AssetReader"] =
+        -- {
+        --     publisherId = 'com.xibalbastudios',
+        -- }
     },
 
     --

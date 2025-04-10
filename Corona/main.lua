@@ -1,10 +1,13 @@
 local gfxe = require('plugin.gfxe')
-local asset_reader = require('plugin.AssetReader')
+
+--for k, v in pairs(gfxe) do print (k, type(v))  end
+
 
 local font
 local platform = system.getInfo('platform')
 
 if platform == 'android' then
+    local asset_reader = require('plugin.AssetReader')
     font = asset_reader.Read('fonts/Inconsolata-Regular.ttf')
 else
     local file = io.open(system.pathForFile('fonts/Inconsolata-Regular.ttf'), 'rb')
@@ -51,7 +54,7 @@ timer.performWithDelay(2000,
 svg2.x, svg2.y = display.contentCenterX, display.contentCenterY
 
 -------------------------------------------------------------------
-
+---[[
 local qoi = gfxe.newStaticImage(
     {
         filename = 'images/qoi_logo.qoi',
@@ -91,3 +94,5 @@ webp3 = gfxe.newAnimatedImage(
 )
 webp3.x, webp3.y = 897, 497
 webp3:play()
+
+--]]
